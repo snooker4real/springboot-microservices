@@ -6,8 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static org.springframework.http.HttpStatus.CREATED;
-import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("/api/v1/employees")
@@ -29,5 +28,6 @@ public class EmployeeController {
         EmployeeDto employee = employeeService.getEmployeeById(employeeId);
         return new ResponseEntity<>(employee, OK);
     }
+
 
 }

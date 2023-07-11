@@ -1,13 +1,17 @@
 package fr.cindanojonathan.departementservice.controller;
 
 import fr.cindanojonathan.departementservice.dto.DepartmentDto;
+import fr.cindanojonathan.departementservice.exception.ErrorDetails;
+import fr.cindanojonathan.departementservice.exception.ResourceNotFoundException;
 import fr.cindanojonathan.departementservice.service.DepartmentService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
-import static org.springframework.http.HttpStatus.CREATED;
-import static org.springframework.http.HttpStatus.OK;
+import java.time.LocalDateTime;
+
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("api/v1/department")
